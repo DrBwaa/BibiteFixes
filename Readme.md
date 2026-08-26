@@ -14,7 +14,7 @@ This project contains a variety of bug fixes and performance improvements for Th
 
 To configure the modpack, open `BepInEx/config/bibites.bibitefixes.cfg` (in the game installation directory). If this file doesn't exist, launch the game once (with BepInEx) to generate it.
 
-Configuration options are described within this config file. After making changes, re-launch the game for them to take effect.
+Configuration options are described within the config file. After making changes, re-launch the game for them to take effect.
 
 ## Compatibility
 
@@ -27,8 +27,10 @@ If there's a specific bug you'd like to see addressed, either in The Bibites its
 
 ## Developing BibiteFixes
 
+To build and develop this project locally
+
 - Clone the project
-- Open `BibiteFixes.csproj` in your editor of choice and edit the HintPath for `BibitesAssembly.dll` to match wherever the library is located on your system.
+- Open `BibiteFixes.csproj` in your editor of choice and edit the HintPath for `BibitesAssembly.dll` to match wherever the library is located on your system (typically `<BibitesInstall>/The Bibites_Data/Managed/BibitesAssembly.dll`).
 - Open a terminal and run `dotnet build`.
 - Copy `bin/Debug/net48/BibiteFixes.dll` into `<BibitesInstall>/BepInEx/plugins`. (TODO: Script this)
 
