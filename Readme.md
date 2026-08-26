@@ -23,9 +23,16 @@ Compatibility with other versions is not guaranteed.
 
 # Contributing
 
-Just open a PR :)
-
 If there's a specific bug you'd like to see addressed, either in The Bibites itself or in this modpack, feel free to open a well-described issue on github. This is a volunteer effort, and we make no promises to address any issues in a timely manner, or ever.
+
+## Developing BibiteFixes
+
+- Clone the project
+- Open `BibiteFixes.csproj` in your editor of choice and edit the HintPath for `BibitesAssembly.dll` to match wherever the library is located on your system.
+- Open a terminal and run `dotnet build`.
+- Copy `bin/Debug/net48/BibiteFixes.dll` into `<BibitesInstall>/BepInEx/plugins`. (TODO: Script this)
+
+## Contribution Notes
 
 Please do not use generative AI/LLMs/Agents to contribute to this project. 
 Pull requests from robots will be closed.

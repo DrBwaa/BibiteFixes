@@ -17,7 +17,7 @@
   
   <ItemGroup>
     <Reference Include="BibitesAssembly">
-      <HintPath>lib/BibitesAssembly.dll</HintPath>
+      <HintPath>../../../../Installations/The Bibites 0.6.3.1/The Bibites_Data/Managed/BibitesAssembly.dll</HintPath>
     </Reference>
   </ItemGroup>
 
