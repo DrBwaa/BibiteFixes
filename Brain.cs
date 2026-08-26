@@ -14,10 +14,8 @@ using UnityEngine;
 namespace CommonFixes
 {
     [HarmonyPatch(typeof(NEATBrain), "GetInputIndex")]
-    public static class Phero3HeadingEvolvable
-    {
-        static bool Prefix(NEATBrain.Inputs? input, ref int __result)
-        {
+    public static class Phero3HeadingEvolvable {
+        static bool Prefix(NEATBrain.Inputs? input, ref int __result) {
             if (input.HasValue)  {
                 return true;
             }

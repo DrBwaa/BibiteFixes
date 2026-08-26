@@ -1,0 +1,12 @@
+Creative Commons License
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+
+Specifics adhering to BibiteFixes
+
+Unless otherwise noted for a File or DLL:
+
+You are NOT! allowed to modify and redistribute this work as your own or pass it off as related to BibiteFixes.
+
+You are NOT! allowed to make any modifications to BibiteFixes and distribute these. You are not allowed to patch or access any files from BibiteFixes by any means except these provided by BibiteFixes. You are not allowed to modify or set Managed or Unmanaged method ponters which originated from a BibiteFixes.dll.
+
+You are allowed to use the contents of this BibiteFixes to learn, and as a starting point for your own work, given full and proper Attributions to all works that have been used.

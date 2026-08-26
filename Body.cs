@@ -14,10 +14,8 @@ using UnityEngine;
 namespace CommonFixes
 {
     [HarmonyPatch(typeof(BibiteBody), nameof(BibiteBody.BecomeReaper))]
-    public static class DisableReaper
-    {
-        static bool Prefix()
-        {
+    public static class DisableReaper {
+        static bool Prefix() {
             return UserSettings.AllowEasterEggs.val;
         }
     }

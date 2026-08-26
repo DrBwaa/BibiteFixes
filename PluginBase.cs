@@ -28,8 +28,7 @@ namespace CommonFixes {
         private ConfigEntry<float> pheroTimerOverrideSeconds;
         public float PheroTimerOverrideSeconds => pheroTimerOverrideSeconds.Value;
 
-        public void Awake()
-        {
+        public void Awake() {
             Instance = this;
             Log = Logger;
 
@@ -42,17 +41,14 @@ namespace CommonFixes {
                 harmony = new Harmony("bibites.slimpheros");
             }
 
-            foreach (Type type in typeof(Plugin).Assembly.GetTypes())
-            {
+            foreach (Type type in typeof(Plugin).Assembly.GetTypes()) {
                 if (type.GetCustomAttribute<HarmonyPatch>() == null) continue;
-                try
-                {
+                try {
                     // TODO: Allow filtering specific patches based on config
                     harmony.CreateClassProcessor(type).Patch();
                     Log.LogInfo($"Patching '{type.Name}'...");
                 }
-                catch (Exception e)
-                {
+                catch (Exception e) {
                     Log.LogError($"'{type.Name}' could not be patched: {e}");
                 }
             }

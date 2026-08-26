@@ -14,12 +14,10 @@ using UnityEngine;
 namespace CommonFixes
 {
     [HarmonyPatch(typeof(TimeController), "UpdateTimeScale")]
-    public static class TPSFix
-    {
+    public static class TPSFix {
         private static readonly FieldInfo BaseFixedDeltaTimeField = AccessTools.Field(typeof(TimeController), "baseFixedDeltaTime");
 
-        static bool Prefix(float val)
-        {
+        static bool Prefix(float val) {
             Time.timeScale = val;
             TimeController.paused = Mathf.Approximately(val, 0f);
             Time.fixedDeltaTime = (float)BaseFixedDeltaTimeField.GetValue(null);
