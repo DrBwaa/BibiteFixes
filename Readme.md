@@ -6,13 +6,13 @@ This project contains a variety of bug fixes and performance improvements for Th
 
 - Install The Bibites
 - Install BepInEx 5.4 (see instructions [here](https://the-bibites.fandom.com/wiki/Modding_Guide_For_Beginners#How_to_install_BepInEx_mods?) or [here](https://docs.bepinex.dev/v5.4.21/articles/user_guide/installation/index.html))
-- Download the plugin: `CommonFixes.dll` (TODO: prebuild this so it's available for download)
+- Download the plugin: `BibiteFixes.dll` (TODO: prebuild this so it's available for download)
   - Put the plugin file into `BepInEx/plugins` within your Bibites installation.
 - Launch The Bibites with BepInEx (see [instructions](https://docs.bepinex.dev/v5.4.21/articles/user_guide/installation/index.html) for your specific operating system).
 
 ## Configuration
 
-To configure the modpack, open `BepInEx/config/bibites.commonfixes.cfg` (in the game installation directory). If this file doesn't exist, launch the game once (with BepInEx) to generate it.
+To configure the modpack, open `BepInEx/config/bibites.bibitefixes.cfg` (in the game installation directory). If this file doesn't exist, launch the game once (with BepInEx) to generate it.
 
 Configuration options are described within this config file. After making changes, re-launch the game for them to take effect.
 

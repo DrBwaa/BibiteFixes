@@ -12,9 +12,9 @@ using SettingScripts;
 using SimulationScripts.BibiteScripts;
 using UnityEngine;
 
-namespace CommonFixes {
+namespace BibiteFixes {
 
-    [BepInPlugin("bibites.commonfixes", "Common Fixes", "1.0.0")]
+    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.0.0")]
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; }
         

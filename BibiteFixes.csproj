@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>CommonFixes</AssemblyName>
-    <Product>Bibites Bugfix Mods</Product>
+    <AssemblyName>BibiteFixes</AssemblyName>
+    <Product>Bibites Bugfix Modpack</Product>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -12,7 +12,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <RootNamespace>CommonFixes</RootNamespace>
+    <RootNamespace>BibiteFixes</RootNamespace>
   </PropertyGroup>
   
   <ItemGroup>

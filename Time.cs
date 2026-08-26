@@ -11,7 +11,7 @@ using SettingScripts;
 using SimulationScripts.BibiteScripts;
 using UnityEngine;
 
-namespace CommonFixes
+namespace BibiteFixes
 {
     [HarmonyPatch(typeof(TimeController), "UpdateTimeScale")]
     public static class TPSFix {

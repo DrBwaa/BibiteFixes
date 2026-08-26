@@ -11,7 +11,7 @@ using SettingScripts;
 using SimulationScripts.BibiteScripts;
 using UnityEngine;
 
-namespace CommonFixes {
+namespace BibiteFixes {
     [HarmonyPatch(typeof(Pherosense), nameof(Pherosense.PherosenseAround))]
     public static class PherosenseTick {
         private static readonly AccessTools.FieldRef<Pherosense, float> ProgressRef = AccessTools.FieldRefAccess<Pherosense, float>("progress");
