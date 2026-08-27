@@ -2,30 +2,30 @@
 
 This project contains a variety of bug fixes and performance improvements for The Bibites.
 
-# Getting Started
+## Getting Started
 
 - Install The Bibites
 - Install BepInEx 5.4 (see instructions [here](https://the-bibites.fandom.com/wiki/Modding_Guide_For_Beginners#How_to_install_BepInEx_mods?) or [here](https://docs.bepinex.dev/v5.4.21/articles/user_guide/installation/index.html))
-- Download the plugin: `BibiteFixes.dll` (TODO: prebuild this so it's available for download)
+- Download the plugin: `BibiteFixes.dll` from https://github.com/DrBwaa/BibiteFixes/releases.
   - Put the plugin file into `BepInEx/plugins` within your Bibites installation.
 - Launch The Bibites with BepInEx (see [instructions](https://docs.bepinex.dev/v5.4.21/articles/user_guide/installation/index.html) for your specific operating system).
 
-## Configuration
+### Configuration
 
 To configure the modpack, open `BepInEx/config/bibites.bibitefixes.cfg` (in the game installation directory). If this file doesn't exist, launch the game once (with BepInEx) to generate it.
 
 Configuration options are described within the config file. After making changes, re-launch the game for them to take effect.
 
-## Compatibility
+### Compatibility
 
 This modpack is built against The Bibites version 0.6.3.1 and BepInEx version 5.4.23.5.
 Compatibility with other versions is not guaranteed.
 
-# Contributing
+## Contributing
 
 If there's a specific bug you'd like to see addressed, either in The Bibites itself or in this modpack, feel free to open a well-described issue on github. This is a volunteer effort, and we make no promises to address any issues in a timely manner, or ever.
 
-## Developing BibiteFixes
+### Developing BibiteFixes
 
 To build and develop this project locally
 
@@ -34,7 +34,7 @@ To build and develop this project locally
 - Open a terminal and run `dotnet build`.
 - Copy `bin/Debug/net48/BibiteFixes.dll` into `<BibitesInstall>/BepInEx/plugins`. (TODO: Script this)
 
-## Contribution Notes
+### Contribution Notes
 
 Please do not use generative AI/LLMs/Agents to contribute to this project. 
 Pull requests from robots will be closed.
