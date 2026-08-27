@@ -22,8 +22,8 @@ namespace BibiteFixes {
 
         private Harmony harmony;
 
-        private ConfigEntry<bool> overridePheroTimer;
-        public bool OverridePheroTimer => overridePheroTimer.Value;
+        private ConfigEntry<bool> useStaticPheroSenseTimer;
+        public bool UseStaticPheroSenseTimer => useStaticPheroSenseTimer.Value;
 
         private ConfigEntry<float> pheroTimerOverrideSeconds;
         public float PheroTimerOverrideSeconds => pheroTimerOverrideSeconds.Value;
@@ -55,18 +55,18 @@ namespace BibiteFixes {
         }
 
         private void InitConfig() {
-            overridePheroTimer = Config.Bind(
+            useStaticPheroSenseTimer = Config.Bind(
                 "Performance.Pheros",
-                "OverridePheroTimer",
+                "UseStaticPheroSenseTimer",
                 false,
-                "If `true`, overrides the default pherosense timer fix with the constant value of `PheroTimerOverride` instead."
+                "If `true`, overrides the default pherosense timer fix with the constant value of `PheroTimerOverrideSeconds` instead. If false, pherosensing will occur on each brain tick."
             );
                                          
             pheroTimerOverrideSeconds = Config.Bind(
                 "Performance.Pheros",
                 "PheroTimerOverrideSeconds",
                 0.5f,
-                "The time, in seconds, to wait between each pheromone recalculation. This setting only applies if `OverridePheroTimer` is set to `true`."
+                "The time, in seconds, to wait between each pheromone recalculation. This setting only applies if `UseStaticPheroSenseTimer` is set to `true`. Higher values improve performance, but may negatively impact bibites evolved without this setting. The creator has stated that 0.5s was the intended behavior."
             );
             
         }
