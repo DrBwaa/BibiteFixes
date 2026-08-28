@@ -11,7 +11,7 @@ To build and develop this project locally:
 - Clone the project
 - Open `BibiteFixes.csproj` in your editor of choice and edit the HintPath for `BibitesAssembly.dll` to match wherever the library is located on your system (typically `<BibitesInstall>/The Bibites_Data/Managed/BibitesAssembly.dll`).
 - Open a terminal and run `dotnet build`.
-- Copy `bin/Debug/net48/BibiteFixes.dll` into `<BibitesInstall>/BepInEx/plugins`. (TODO: Script this)
+- Copy `bin/Debug/net48/BibiteFixes.dll` into `<BibitesInstall>/BepInEx/plugins`. A script to automate this step exists at `script/copy_to_install.sh`.
 
 Submit all pull requests against the `dev` branch.
 
