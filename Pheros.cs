@@ -14,6 +14,8 @@ using UnityEngine;
 namespace BibiteFixes {
     [HarmonyPatch(typeof(Pherosense), nameof(Pherosense.PherosenseAround))]
     public static class PherosenseTick {
+        // TODO: Log configuration options
+        
         private static readonly AccessTools.FieldRef<Pherosense, float> ProgressRef = AccessTools.FieldRefAccess<Pherosense, float>("progress");
 
         static bool Prefix(Pherosense __instance) {
