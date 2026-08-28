@@ -18,6 +18,7 @@ Submit all pull requests against the `dev` branch.
 ### Contribution Notes
 
 Please do not use generative AI/LLMs/Agents to contribute to this project. 
+
 Pull requests from robots will be closed.
 
 The maintainers of this project reserve the right to reject and/or remove any contributions, for any reason.

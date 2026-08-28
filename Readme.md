@@ -19,11 +19,15 @@ Configuration options are described within the config file. After making changes
 ### Compatibility
 
 This modpack is built against The Bibites version 0.6.3.1 and BepInEx version 5.4.23.5.
+
 Compatibility with other versions is not guaranteed.
 
 # Attributions
 
 Thanks to overwatch_mercy for putting together the original version of this modpack and writing several fixes.
+
 Thanks to melting_diamond for the BepInEx tutorial and guidance.
+
 Thanks to rogerwrightshoe for `FullMouthFix`.
+
 Thanks to carlosspicywiener for the original versions of several more fixes.
