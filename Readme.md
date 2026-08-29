@@ -29,8 +29,8 @@ Compatibility with other versions is not guaranteed.
 - FullMouthFix: Holding ten objects no longer causes permanent inability to eat anything.
 - PherosenseTick: Phero senses now update either every brain period, or every half second (configurable), rather than every single tick.
 - PheromoneCost: Phero cost will no longer display a stale value in the UI.
-- TPSFix: Low simulation speeds no longer gain extra TPS. TPS stays locked to the expected setting.
+- TPSFix: Low simulation speeds no longer gain extra TPS: TPS stays locked to the expected setting.
 
 ## Attributions
 
-See [ATTRIBUTIONS.md](https://github.com/DrBwaa/BibiteFixes/blob/main/ATTRIBUTIONS.md)
+See ATTRIBUTIONS.md
