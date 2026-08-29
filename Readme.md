@@ -22,6 +22,15 @@ This modpack is built against The Bibites version 0.6.3.1 and BepInEx version 5.
 
 Compatibility with other versions is not guaranteed.
 
+## Fixes Included
+
+- DisableReaper: Reaper trait will no longer appear with Easter-eggs disabled.
+- Phero3HeadingEvolvable: The `Phero3Heading` node can now be chosen as an evolved input.
+- FullMouthFix: Holding ten objects no longer causes permanent inability to eat anything.
+- PherosenseTick: Phero senses now update either every brain period, or every half second (configurable), rather than every single tick.
+- PheromoneCost: Phero cost will no longer display a stale value in the UI.
+- TPSFix: Low simulation speeds no longer gain extra TPS: TPS stays locked to the expected setting.
+
 ## Attributions
 
 See ATTRIBUTIONS.md
