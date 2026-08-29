@@ -20,8 +20,8 @@ namespace BibiteFixes {
 
         static bool Prefix(Pherosense __instance) {
             float SensePeriod = NEATBrain.brainPeriod;
-            if (Plugin.Instance.UseStaticPheroSenseTimer) {
-                SensePeriod = Plugin.Instance.PheroTimerOverrideSeconds;
+            if (Plugin.Instance.Settings.UseStaticPheroSenseTimer) {
+                SensePeriod = Plugin.Instance.Settings.PheroTimerOverrideSeconds;
             }
 
             float progress = ProgressRef(__instance) + Time.fixedDeltaTime;
