@@ -33,4 +33,4 @@ Compatibility with other versions is not guaranteed.
 
 ## Attributions
 
-See ATTRIBUTIONS.md
+See [ATTRIBUTIONS.md](https://github.com/DrBwaa/BibiteFixes/blob/main/ATTRIBUTIONS.md)
