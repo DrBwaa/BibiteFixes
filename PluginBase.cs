@@ -118,7 +118,7 @@ namespace BibiteFixes {
         }
 
         private void BindConfig() {
-
+            // ReaperFix
             reaperFixEnabled = config.Bind(
                 "ReaperFix",
                 "Enabled",
@@ -126,6 +126,7 @@ namespace BibiteFixes {
                 "Forces the Reaper trait to respect the Easter-egg setting (enabled/disabled)."
             );
 
+            // Phero3HeadingFix
             phero3HeadingFixEnabled = config.Bind(
                 "Phero3HeadingFix",
                 "Enabled",
@@ -133,6 +134,7 @@ namespace BibiteFixes {
                 "Makes Phero3Heading evolvable."
             );
 
+            // FullMouthFix
             fullMouthFixEnabled = config.Bind(
                 "FullMouthFix",
                 "Enabled",
@@ -140,6 +142,7 @@ namespace BibiteFixes {
                 "Fixes a bug where holding ten objects at once would prevent eating (ever again)."
             );
 
+            // PheroCostFix
             pheroCostFixEnabled = config.Bind(
                 "PheroCostFix",
                 "Enabled",
@@ -147,20 +150,7 @@ namespace BibiteFixes {
                 "Fixes a bug where the pheromone cost would show a stale value in the UI."
             );
 
-            constantTPSEnabled = config.Bind(
-                "ConstantTPS",
-                "Enabled",
-                true,
-                "Prevents the game from inserting extra sim ticks below 1x simulation speed."
-            );
-
-            autosaveSpeedFixEnabled = config.Bind(
-                "AutosaveSpeedFix",
-                "Enabled",
-                true,
-                "Preserves the target simulation speed setting when auto-reloading after an autosave."
-            );
-
+            // PheroSenseFix
             pheroSenseFixEnabled = config.Bind(
                 "PheroSenseFix",
                 "Enabled",
@@ -180,6 +170,22 @@ namespace BibiteFixes {
                 "PheroTimerOverrideSeconds",
                 0.5f,
                 "The time, in seconds, to wait between each pheromone recalculation. This setting only applies if `UseStaticPheroSenseTimer` is set to `true`.\nHigher values improve performance, but may negatively impact bibites evolved without this setting.\nThe creator has stated that 0.5s was the intended behavior."
+            );
+
+            // ConstantTPS
+            constantTPSEnabled = config.Bind(
+                "ConstantTPS",
+                "Enabled",
+                true,
+                "Prevents the game from inserting extra sim ticks below 1x simulation speed."
+            );
+
+            // AutosaveSpeedFix
+            autosaveSpeedFixEnabled = config.Bind(
+                "AutosaveSpeedFix",
+                "Enabled",
+                true,
+                "Preserves the target simulation speed setting when auto-reloading after an autosave."
             );
         }
 
