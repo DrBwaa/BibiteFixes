@@ -14,12 +14,14 @@ using UnityEngine;
 namespace BibiteFixes {
     [HarmonyPatch(typeof(Pherosense), nameof(Pherosense.PherosenseAround))]
     public static class PherosenseTick {
+        // TODO: Log configuration options
+        
         private static readonly AccessTools.FieldRef<Pherosense, float> ProgressRef = AccessTools.FieldRefAccess<Pherosense, float>("progress");
 
         static bool Prefix(Pherosense __instance) {
             float SensePeriod = NEATBrain.brainPeriod;
-            if (Plugin.Instance.UseStaticPheroSenseTimer) {
-                SensePeriod = Plugin.Instance.PheroTimerOverrideSeconds;
+            if (Plugin.Instance.Settings.UseStaticPheroSenseTimer) {
+                SensePeriod = Plugin.Instance.Settings.PheroTimerOverrideSeconds;
             }
 
             float progress = ProgressRef(__instance) + Time.fixedDeltaTime;

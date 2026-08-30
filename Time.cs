@@ -25,4 +25,23 @@ namespace BibiteFixes
             return false;
         }
     }
+
+    [HarmonyPatch(typeof(SaveController), "ReloadAfterAutoSave")]
+    public static class SaveSpeedOnReload {
+        public static float speedAtReload = 0.0f; 
+        [HarmonyPrefix]
+        static void Prefix() {
+            speedAtReload = TimeController.targetTimeScale.GetValue();
+        }
+    }
+
+    [HarmonyPatch(typeof(SimulationManager), "InitializeScene")]
+    public static class SetSpeedOnReload {
+        [HarmonyPrefix]
+        public static void Prefix() {
+            if (SimulationManager.fromAutosaveReload) {
+                TimeController.targetTimeScale.SetValue(SaveSpeedOnReload.speedAtReload);
+            }
+        }
+    }
 }

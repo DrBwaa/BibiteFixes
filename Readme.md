@@ -19,31 +19,18 @@ Configuration options are described within the config file. After making changes
 ### Compatibility
 
 This modpack is built against The Bibites version 0.6.3.1 and BepInEx version 5.4.23.5.
+
 Compatibility with other versions is not guaranteed.
 
-## Contributing
+## Fixes Included
 
-If there's a specific bug you'd like to see addressed, either in The Bibites itself or in this modpack, feel free to open a well-described issue on github. This is a volunteer effort, and we make no promises to address any issues in a timely manner, or ever.
+- DisableReaper: Reaper trait will no longer appear with Easter-eggs disabled.
+- Phero3HeadingEvolvable: The `Phero3Heading` node can now be chosen as an evolved input.
+- FullMouthFix: Holding ten objects no longer causes permanent inability to eat anything.
+- PherosenseTick: Phero senses now update either every brain period, or every half second (configurable), rather than every single tick.
+- PheromoneCost: Phero cost will no longer display a stale value in the UI.
+- TPSFix: Low simulation speeds no longer gain extra TPS: TPS stays locked to the expected setting.
 
-### Developing BibiteFixes
+## Attributions
 
-To build and develop this project locally
-
-- Clone the project
-- Open `BibiteFixes.csproj` in your editor of choice and edit the HintPath for `BibitesAssembly.dll` to match wherever the library is located on your system (typically `<BibitesInstall>/The Bibites_Data/Managed/BibitesAssembly.dll`).
-- Open a terminal and run `dotnet build`.
-- Copy `bin/Debug/net48/BibiteFixes.dll` into `<BibitesInstall>/BepInEx/plugins`. (TODO: Script this)
-
-### Contribution Notes
-
-Please do not use generative AI/LLMs/Agents to contribute to this project. 
-Pull requests from robots will be closed.
-
-The maintainers of this project reserve the right to reject and/or remove any contributions, for any reason.
-
-# Attributions
-
-Thanks to overwatch_mercy for putting together the original version of this modpack and writing several fixes.
-Thanks to melting_diamond for the BepInEx tutorial and guidance.
-Thanks to rogerwrightshoe for `FullMouthFix`.
-Thanks to carlosspicywiener for the original versions of several more fixes.
+See [ATTRIBUTIONS.md](https://github.com/DrBwaa/BibiteFixes/blob/main/docs/ATTRIBUTIONS.md)

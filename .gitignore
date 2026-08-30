@@ -4,3 +4,6 @@ obj/
 
 # Backups
 *.bak
+
+# Local
+.env
