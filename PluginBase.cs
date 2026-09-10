@@ -14,7 +14,7 @@ using UnityEngine;
 
 namespace BibiteFixes {
 
-    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.0.0")]
+    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.1.0")]
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; }
 
@@ -184,8 +184,8 @@ namespace BibiteFixes {
             autosaveSpeedFixEnabled = config.Bind(
                 "AutosaveSpeedFix",
                 "Enabled",
-                true,
-                "Preserves the target simulation speed setting when auto-reloading after an autosave."
+                false,
+                "Preserves the target simulation speed setting when auto-reloading after an autosave.\nThis can cause the save time to drift forward a little more than usual at high speeds, so if saving exactly every one minute is important, it's recommended to disable this fix."
             );
         }
 
