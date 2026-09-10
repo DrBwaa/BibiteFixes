@@ -30,6 +30,7 @@ Compatibility with other versions is not guaranteed.
 - PherosenseTick: Phero senses now update either every brain period, or every half second (configurable), rather than every single tick.
 - PheromoneCost: Phero cost will no longer display a stale value in the UI.
 - TPSFix: Low simulation speeds no longer gain extra TPS: TPS stays locked to the expected setting.
+- AutosaveSpeedFix: Preserves the target simulation speed setting when auto-reloading after an autosave.
 
 ## Attributions
 

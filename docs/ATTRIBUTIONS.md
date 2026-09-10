@@ -8,7 +8,7 @@ This modpack represents work from many people, not only the recognized contribut
 - PherosenseTick: by overwatch_mercy (original by carlosspicywiener)
 - PheromoneCost: by overwatch_mercy (original by carlosspicywiener)
 - TPSFix: by overwatch_mercy
-- SaveSpeedOnReload / SetSpeedOnReload: by stealthsteeler
+- AutosaveSpeedFix: by stealthsteeler
 
 
 Special thanks to overwatch_mercy for  putting together the original version of this modpack, and to melting_diamond for helping me learn how to mod The Bibites.
