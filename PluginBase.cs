@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -47,7 +48,8 @@ namespace BibiteFixes {
                 { "PheromoneCost", "PheroCostFix" },
                 { "TPSFix", "ConstantTPS" },
                 { "SaveSpeedOnReload", "AutosaveSpeedFix" },
-                { "SetSpeedOnReload", "AutosaveSpeedFix" }
+                { "SetSpeedOnReload", "AutosaveSpeedFix" },
+                { "LinuxOpenTemplateFolderFix", "LinuxOpenFoldersFix" }
             };
         }
 
@@ -99,6 +101,9 @@ namespace BibiteFixes {
         
         private ConfigEntry<bool> autosaveSpeedFixEnabled;
         public bool AutosaveSpeedFixEnabled => autosaveSpeedFixEnabled.Value;
+        
+        private ConfigEntry<bool> linuxOpenFoldersFixEnabled;
+        public bool LinuxOpenFoldersFixEnabled => linuxOpenFoldersFixEnabled.Value;
 
         private ConfigEntry<bool> useStaticPheroSenseTimer;
         public bool UseStaticPheroSenseTimer => useStaticPheroSenseTimer.Value;
@@ -187,6 +192,14 @@ namespace BibiteFixes {
                 false,
                 "Preserves the target simulation speed setting when auto-reloading after an autosave.\nThis can cause the save time to drift forward a little more than usual at high speeds, so if saving exactly every one minute is important, it's recommended to disable this fix."
             );
+
+            // LinuxOpenFoldersFix
+            linuxOpenFoldersFixEnabled = config.Bind(
+                "LinuxOpenFoldersFix",
+                "Enabled",
+                true,
+                "Fixes the 'Open Save Folder' button in the Bibite Library, when using Linux."
+            );
         }
 
         private void InitLookup() {
@@ -197,7 +210,8 @@ namespace BibiteFixes {
                 { "PheroSenseFix", PheroSenseFixEnabled },
                 { "PheroCostFix", PheroCostFixEnabled },
                 { "ConstantTPS", ConstantTPSEnabled },
-                { "AutosaveSpeedFix", AutosaveSpeedFixEnabled }
+                { "AutosaveSpeedFix", AutosaveSpeedFixEnabled },
+                { "LinuxOpenFoldersFix", LinuxOpenFoldersFixEnabled && RuntimeInformation.IsOSPlatform(OSPlatform.Linux) }
             };
         }
 
