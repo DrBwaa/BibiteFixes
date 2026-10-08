@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -14,7 +15,7 @@ using UnityEngine;
 
 namespace BibiteFixes {
 
-    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.1.0")]
+    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.2.0")]
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; }
 
@@ -47,7 +48,10 @@ namespace BibiteFixes {
                 { "PheromoneCost", "PheroCostFix" },
                 { "TPSFix", "ConstantTPS" },
                 { "SaveSpeedOnReload", "AutosaveSpeedFix" },
-                { "SetSpeedOnReload", "AutosaveSpeedFix" }
+                { "SetSpeedOnReload", "AutosaveSpeedFix" },
+                { "LinuxOpenBB8FolderFix", "LinuxOpenFoldersFix" },
+                { "LinuxOpenScenarioFolderFix", "LinuxOpenFoldersFix" },
+                { "LinuxOpenSavesFolderFix", "LinuxOpenFoldersFix" }
             };
         }
 
@@ -99,6 +103,9 @@ namespace BibiteFixes {
         
         private ConfigEntry<bool> autosaveSpeedFixEnabled;
         public bool AutosaveSpeedFixEnabled => autosaveSpeedFixEnabled.Value;
+        
+        private ConfigEntry<bool> linuxOpenFoldersFixEnabled;
+        public bool LinuxOpenFoldersFixEnabled => linuxOpenFoldersFixEnabled.Value;
 
         private ConfigEntry<bool> useStaticPheroSenseTimer;
         public bool UseStaticPheroSenseTimer => useStaticPheroSenseTimer.Value;
@@ -187,6 +194,14 @@ namespace BibiteFixes {
                 false,
                 "Preserves the target simulation speed setting when auto-reloading after an autosave.\nThis can cause the save time to drift forward a little more than usual at high speeds, so if saving exactly every one minute is important, it's recommended to disable this fix."
             );
+
+            // LinuxOpenFoldersFix
+            linuxOpenFoldersFixEnabled = config.Bind(
+                "LinuxOpenFoldersFix",
+                "Enabled",
+                true,
+                "Fixes the various 'Open Folder' buttons when using Linux. Includes a fix for the bibites folder, saves folder, and scenario folder."
+            );
         }
 
         private void InitLookup() {
@@ -197,7 +212,8 @@ namespace BibiteFixes {
                 { "PheroSenseFix", PheroSenseFixEnabled },
                 { "PheroCostFix", PheroCostFixEnabled },
                 { "ConstantTPS", ConstantTPSEnabled },
-                { "AutosaveSpeedFix", AutosaveSpeedFixEnabled }
+                { "AutosaveSpeedFix", AutosaveSpeedFixEnabled },
+                { "LinuxOpenFoldersFix", LinuxOpenFoldersFixEnabled && RuntimeInformation.IsOSPlatform(OSPlatform.Linux) }
             };
         }
 
