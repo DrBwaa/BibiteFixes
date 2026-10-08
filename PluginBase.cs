@@ -49,7 +49,9 @@ namespace BibiteFixes {
                 { "TPSFix", "ConstantTPS" },
                 { "SaveSpeedOnReload", "AutosaveSpeedFix" },
                 { "SetSpeedOnReload", "AutosaveSpeedFix" },
-                { "LinuxOpenTemplateFolderFix", "LinuxOpenFoldersFix" }
+                { "LinuxOpenBB8FolderFix", "LinuxOpenFoldersFix" },
+                { "LinuxOpenScenarioFolderFix", "LinuxOpenFoldersFix" },
+                { "LinuxOpenSavesFolderFix", "LinuxOpenFoldersFix" }
             };
         }
 
@@ -198,7 +200,7 @@ namespace BibiteFixes {
                 "LinuxOpenFoldersFix",
                 "Enabled",
                 true,
-                "Fixes the 'Open Save Folder' button in the Bibite Library, when using Linux."
+                "Fixes the various 'Open Folder' buttons when using Linux. Includes a fix for the bibites folder, saves folder, and scenario folder."
             );
         }
 
