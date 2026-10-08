@@ -15,7 +15,7 @@ using UnityEngine;
 
 namespace BibiteFixes {
 
-    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.1.0")]
+    [BepInPlugin("bibites.bibitefixes", "BibiteFixes", "1.2.0")]
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; }
 

@@ -9,6 +9,7 @@ This modpack represents work from many people, not only the recognized contribut
 - PheromoneCost: by overwatch_mercy (original by carlosspicywiener)
 - TPSFix: by overwatch_mercy
 - AutosaveSpeedFix: by stealthsteeler
+- LinuxOpenFoldersFix: by drbwaa
 
 
 Special thanks to overwatch_mercy for  putting together the original version of this modpack, and to melting_diamond for helping me learn how to mod The Bibites.

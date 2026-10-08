@@ -11,6 +11,10 @@ Initial Release
 - Moved config settings for PheroSenseFix from `Performace.Pheros` section to new `PheroSenseFix` section.
   - NOTE: If you had configured these with non-default settings, they will not be carried over to the new setting names automatically.
 
+## v1.2.0
+
+- Added LinuxOpenFoldersFix
+
 ## RC
 
 - 

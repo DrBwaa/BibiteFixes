@@ -31,6 +31,7 @@ Compatibility with other versions is not guaranteed.
 - PheromoneCost: Phero cost will no longer display a stale value in the UI.
 - TPSFix: Low simulation speeds no longer gain extra TPS: TPS stays locked to the expected setting.
 - AutosaveSpeedFix: Preserves the target simulation speed setting when auto-reloading after an autosave.
+- LinuxOpenFoldersFix: Allows linux users to use the "open folder" buttons for savegames, bibites, and scenarios.
 
 ## Attributions
 
